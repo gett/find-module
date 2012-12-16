@@ -43,7 +43,7 @@ var findModule = function() {
 	options.extensions = [].concat(options.extensions || ['js', 'json']);
 
 	if (!options.path) throw new Error('path is required');
-	if (options.filename && !options.dirname) options.dirname = path.basedir(options.filename);
+	if (options.filename && !options.dirname) options.dirname = path.dirname(options.filename);
 
 	var path = options.path;
 
