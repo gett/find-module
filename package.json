@@ -1,0 +1,14 @@
+{
+	"name":"find-module",
+	"description":"find a module from a require path asyncronously using custom module folders",
+	"keywords": ["modules", "require", "resolve"],
+	"version":"0.1.0",
+	"repository": "git://github.com/gett/find-module.git",
+	"author": "Ge.tt <hello@ge.tt>",
+	"contributors": [
+ 		"Mathias Buus Madsen <m@ge.tt>"
+	],
+	"scripts": {
+		"test":"node ./tests"
+	}
+}
