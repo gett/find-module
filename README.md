@@ -1,6 +1,6 @@
 # find-module
 
-Find a module specified by a require path asynchronously using Node's module resolution.
+Find a module specified by a require path using Node's module resolution.
 
 	npm install find-module
 
@@ -14,6 +14,14 @@ findModule('./some-path', {
 }, function(err, filename) {
 	console.log('some-path resolved to '+filename+' from some-parent-dir');
 });
+
+// or dont provide a callback to use the sync version
+
+var filename = findModule('./some-path', {
+	dirname: 'some-parent-dir' // the directory from which ./some-path should be resolved
+});
+
+console.log('some-path resolved to '+filename+' from some-parent-dir');
 ```
 
 If you pass a module path (`'my-module'`) find-module by default will look for a `node_modules` folder
