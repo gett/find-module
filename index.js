@@ -110,7 +110,7 @@ var buildFindModule = function(fs) {
 			if (err) return callback(err);
 
 			if (path[0] === '.') return onpath(join(dirname, path), callback);
-			if (path[0] === '/') return onpath(path, callback);
+			if (path.slice(0, root.length) === root) return onpath(path, callback);
 
 			onmodule(path, dirname, callback);
 		});
